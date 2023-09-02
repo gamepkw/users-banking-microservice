@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/atm5_microservices/users_service/internal/utils"
+	"github.com/gamepkw/users-banking-microservice/internal/utils"
 
-	model "github.com/atm5_microservices/users_service/internal/models"
+	model "github.com/gamepkw/users-banking-microservice/internal/models"
 
-	"github.com/atm5_microservices/users_service/internal/middleware"
+	"github.com/gamepkw/users-banking-microservice/internal/middleware"
 )
 
 type userService struct {

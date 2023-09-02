@@ -5,11 +5,11 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	model "github.com/atm5_microservices/users_service/internal/models"
+	model "github.com/gamepkw/users-banking-microservice/internal/models"
 
-	"github.com/atm5_microservices/users_service/internal/utils"
+	"github.com/gamepkw/users-banking-microservice/internal/utils"
 
-	"github.com/atm5_microservices/users_service/internal/middleware"
+	"github.com/gamepkw/users-banking-microservice/internal/middleware"
 
 	"github.com/sirupsen/logrus"
 )

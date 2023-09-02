@@ -7,7 +7,7 @@ import (
 
 	"time"
 
-	model "github.com/atm5_microservices/users_service/internal/models"
+	model "github.com/gamepkw/users-banking-microservice/internal/models"
 	"github.com/go-sql-driver/mysql"
 )
 

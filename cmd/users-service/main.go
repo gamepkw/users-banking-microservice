@@ -5,10 +5,6 @@ import (
 	"net/http"
 	"time"
 
-	_accountRepo "github.com/gamepkw/accounts-banking-microservice/internal/repositories"
-
-	_accountService "github.com/gamepkw/accounts-banking-microservice/internal/services"
-
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/echo/v4"
 	"github.com/spf13/viper"

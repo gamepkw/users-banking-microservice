@@ -5,6 +5,7 @@ import (
 
 	"github.com/labstack/echo/v4"
 
+	authModel "github.com/gamepkw/authentication-banking-microservice/models"
 	model "github.com/gamepkw/users-banking-microservice/internal/models"
 
 	"github.com/gamepkw/users-banking-microservice/internal/utils"
@@ -19,7 +20,7 @@ import (
 // UserHandler  represent the httphandler for user
 type UserHandler struct {
 	UService    model.UserService
-	AuthService model.AuthenticationService
+	AuthService authModel.AuthenticationService
 }
 
 type Response struct {
@@ -34,7 +35,7 @@ type LoginResponse struct {
 }
 
 // NewUserHandler will initialize the users/ resources endpoint
-func NewUserHandler(e *echo.Echo, us model.UserService, auths model.AuthenticationService) {
+func NewUserHandler(e *echo.Echo, us model.UserService, auths authModel.AuthenticationService) {
 	handler := &UserHandler{
 		UService:    us,
 		AuthService: auths,

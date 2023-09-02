@@ -23,6 +23,11 @@ type UserHandler struct {
 	AuthService authModel.AuthenticationService
 }
 
+type ResponseError struct {
+	Code    string `json:"code"`
+	Message string `json:"message"`
+}
+
 type Response struct {
 	Message string              `json:"message"`
 	Body    *model.UserResponse `json:"body,omitempty"`
@@ -254,4 +259,22 @@ func (a *UserHandler) SetNewPin(c echo.Context) (err error) {
 	}
 
 	return c.JSON(http.StatusOK, Response{Message: "Set new pin successfully", Body: nil})
+}
+
+func getStatusCode(err error) int {
+	if err == nil {
+		return http.StatusOK
+	}
+
+	logrus.Error(err)
+	switch err {
+	case model.ErrInternalServerError:
+		return http.StatusInternalServerError
+	case model.ErrNotFound:
+		return http.StatusNotFound
+	case model.ErrConflict:
+		return http.StatusConflict
+	default:
+		return http.StatusInternalServerError
+	}
 }

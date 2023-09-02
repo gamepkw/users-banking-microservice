@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gamepkw/accounts-banking-microservice v0.0.0-20230902103848-2a53d22978a8 // indirect
+	github.com/gamepkw/authentication-banking-microservice v0.0.0-20230902134611-31d43b2165f7 // indirect
 	github.com/go-redis/redis v6.15.9+incompatible // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect

@@ -13,7 +13,7 @@ type userService struct {
 	contextTimeout time.Duration
 }
 
-func NewuserService(ur userRepo.UserRepository, timeout time.Duration) *userService {
+func NewUserService(ur userRepo.UserRepository, timeout time.Duration) *userService {
 	return &userService{
 		userRepo:       ur,
 		contextTimeout: timeout,

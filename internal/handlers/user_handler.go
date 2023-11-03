@@ -29,10 +29,9 @@ type Response struct {
 	Body    *model.UserResponse `json:"body,omitempty"`
 }
 
-func NewUserHandler(e *echo.Echo, us userService.UserService, auths authModel.AuthenticationService) {
+func NewUserHandler(e *echo.Echo, us userService.UserService) {
 	handler := &UserHandler{
 		userService: us,
-		AuthService: auths,
 	}
 
 	restrictedGroup := e.Group("/users/pin")
